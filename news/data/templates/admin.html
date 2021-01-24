@@ -1,0 +1,19 @@
+{% extends 'home.html' %}
+
+{% block content %}
+{% load crispy_forms_tags %}
+<div class="container-fluid">
+    
+<div class="row mt-5">
+  <div class="col-lg-3">
+    <div class="list-group">
+        <li class="list-group-item text-center active">CATEGORY</li>
+            <a href="{% url 'catadd' %}" class='list-group-item list-group-item-action'>ADD CATEGORY</a>
+            <a href="{% url 'headadd' %}" class='list-group-item list-group-item-action'>ADD HEADLINES</a>
+            <a href="{% url 'viewcat' %}" class='list-group-item list-group-item-action'>ALL CATEGORY</a>
+            <a href="{% url 'viewhead' %}" class='list-group-item list-group-item-action'>ALL HEADLINES</a>
+    </div>
+</div>
+</div>
+</div>
+{% endblock %}

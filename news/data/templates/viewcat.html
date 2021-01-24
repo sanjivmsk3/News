@@ -1,0 +1,27 @@
+{% extends 'admin.html' %}
+
+{% block content %}
+<div class="container">
+    
+    <div class="row">
+        <div class="col-lg-12 mt-2">
+            <table class="table table-sm table-hover">
+                <tr class="bg-primary text-white">
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Slug</th>
+                    <th>Action</th>
+                </tr>
+                {% for fo in cat %}
+                <tr>
+                    <td>{{fo.id}}</td>
+                    <td>{{fo.name}}</td>
+                    <td>{{fo.slug}}</td>
+                    <td>EDIT</td>
+                </tr>
+                {% endfor %}
+            </table>
+            
+        </div>
+
+{% endblock %}

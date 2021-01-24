@@ -1,0 +1,25 @@
+{% extends 'home.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+<div class="row mt-5">
+    <div class="col-lg-4 mx-auto">
+        <div class="card">
+            <div class="card-header">Register Account</div>
+            <div class="mt-4">
+                <div class="d-flex justify-content-center links">
+                    Already have an account? <a href="" class="ml-2">Login</a>
+                </div>
+            </div>
+            <div class="card-body">
+                <form action="{% url 'signup' %}" method="POST">
+                    {% csrf_token %}
+                    {{form|crispy}}
+                    <div class="d-grid">
+                        <input class="btn btn-primary" type="submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock%}
